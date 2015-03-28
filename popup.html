@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/app.css">
+	<meta charset="UTF-8">
+</head>
+</html>
+<div id="bookmark-extension"></div>
+<!-- Alternative au tag script non autorisé -->
+<textarea id="bookmark-template" style="display: none;">
+	<div id="bookmark-header">
+		<i class="icon-search"></i>&nbsp;
+		<input type="text" id="bookmark-input" placeholder="Search a bookmark">
+	</div>
+	<div id="bookmark-results">
+		{{#bookmarks.length}}
+			<ul>
+			{{#bookmarks}}
+				<li><a href="{{url}}"><img src="https://www.google.com/s2/favicons?domain={{url}}"> {{title}}</a></li>
+			{{/bookmarks}}
+			</ul>
+		{{/bookmarks.length}}
+		{{^bookmarks}}
+			<p>Nothing to show <i class="icon-neutral"></i></p>
+		{{/bookmarks}}
+	</div>
+</textarea>
+<script src="libs/jquery.min.js"></script>
+<script src="libs/ractive.min.js"></script>
+<script src="js/app.js"></script>
