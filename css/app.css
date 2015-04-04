@@ -46,16 +46,17 @@
 	width: 387px;
 	max-height: 287px;
 	overflow: auto;
-	padding: 5px;
+}
+#bookmark-results ul {
+	padding-left: 0;
 }
 #bookmark-results li {
 	text-align: left;
 	margin: 18px 7px;
 	list-style: none;
-	padding-bottom: 5px;
-}
-#bookmark-results li:not(:last-child) {
-	border-bottom: solid 1px #eee;
+	padding: 8px;
+	background: #eee;
+	border-bottom: solid 2px #ccc;
 }
 #bookmark-results a, #bookmark-results a:visited {
 	text-decoration: none;

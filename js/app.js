@@ -1,3 +1,5 @@
+Ractive.DEBUG = false;
+
 var bookmarks = new Ractive({
     el: $('#bookmark-extension'),
     template: $('#bookmark-template').val(),
