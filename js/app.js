@@ -7,7 +7,7 @@ var bookmarks = new Ractive({
 });
 
 // Ouverture des bookmarks qui seront ajoutés lors d'une recherche, dans un nouvel onglet
-$('#bookmark-results').on('click', 'li > a', function(e) {
+$('#bookmark-results').on('click', 'a.bookmark', function(e) {
     e.preventDefault();
     chrome.tabs.create({ url: $(this).attr('href') });
 });
